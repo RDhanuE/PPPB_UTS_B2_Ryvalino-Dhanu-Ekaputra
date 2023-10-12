@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Calorify</string>
+    <string name="app_description">
+        Raih kesehatan prima bersama CALORIFY!\nDengan CALORIFY, anda dapat\nmemanajamen kalori yang
+        anda konsumsi\nmencatat olahraga serta kalori yang terbakar\nmelihat memonitor perkembangan
+        kesehatan anda sesuai dengan target yang anda tetapkan.
+        \n\nSemuanya bisa hidup sehat bila berniat. \nNamun, semuanya bisa hidup sehat LEBIH MUDAH dengan
+        menggunakan CALORIFY
+    </string>
+    <array name="weight">
+        <item>Kg</item>
+        <item>Lb</item>
+    </array>
+    <array name="tujuan">
+        <item>Cutting</item>
+        <item>Bulking</item>
+        <item>Maintaining</item>
+    </array>
+    <array name="jenisIn">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snacks</item>
+    </array>
+</resources>

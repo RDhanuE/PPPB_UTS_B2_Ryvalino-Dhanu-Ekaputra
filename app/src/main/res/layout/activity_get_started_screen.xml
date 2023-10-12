@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStartedScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="56dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightBlue"
+            android:padding="8dp"
+            android:text="Getting Started"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:hint="Nama"
+        android:layout_weight="4"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/input_background"
+        android:id="@+id/input_nama"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        />
+
+        <EditText
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:hint="Usia"
+            android:layout_weight="4"
+            android:layout_margin="24dp"
+            android:background="@drawable/input_background"
+            android:id="@+id/input_usia"
+            app:layout_constraintTop_toBottomOf="@+id/input_nama"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/input_usia"
+            android:layout_margin="24dp"
+            app:cardCornerRadius="20dp"
+            android:id="@+id/input_BB_sekarang">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="8"
+                android:background="@drawable/input_background"
+                >
+
+                <EditText
+                    android:id="@+id/text_input_BB_Sekarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="16dp"
+                    android:hint="Berat Badan Sekarang"
+                    android:layout_weight="2"
+                    android:background="@drawable/no_underline_input"
+                    android:inputType="number"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinner_BB_sekarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:entries="@array/weight"
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/input_BB_sekarang"
+            android:id="@+id/input_BB_goals"
+            android:layout_margin="24dp"
+            app:cardCornerRadius="20dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="8"
+                android:background="@drawable/input_background"
+                >
+
+                <EditText
+                    android:id="@+id/text_input_BB_goals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="16dp"
+                    android:hint="Berat Badan Tujuan"
+                    android:layout_weight="2"
+                    android:background="@drawable/no_underline_input"
+                    android:inputType="number"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinner_BB_tujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:entries="@array/weight"
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/input_BB_goals"
+            android:id="@+id/tujuan"
+            android:layout_margin="24dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:background="@drawable/input_background"
+                >
+
+                <TextView
+                    android:id="@+id/text_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="16dp"
+                    android:text="Tujuan"
+                    android:layout_weight="1"
+                    android:background="@drawable/no_underline_input"
+                    android:inputType="number"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinner_tujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/tujuan"
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tanggal_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/input_background_top"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:text="Tanggal Target Pencapaian"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/tujuan" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tanggal_title"
+            android:id="@+id/tanggal"
+            android:elevation="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+
+            >
+
+            <CalendarView
+                android:id="@+id/calender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_calender"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:hint="Target Kalori Perhari"
+        android:layout_weight="4"
+        android:layout_margin="24dp"
+        android:background="@drawable/input_background"
+        android:id="@+id/input_kalori"
+        app:layout_constraintTop_toBottomOf="@+id/tanggal"
+        android:inputType="number"
+        />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_kalori"
+            tools:layout_editor_absoluteX="24dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue"
+                android:text="Lets Get Started!"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
